@@ -1,0 +1,40 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Hoda Karimi
+Student ID#: 138611223
+Email      : hkarimi9@myseneca.ca
+Section    : NKK
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Because in price1, float is used insted of double (%f instead of %lf).Float has limited precision compared to double therefore
+we have 17.959999 as a result.
+
+2. 
+a.The first line is some kind of casting because when you write .0 after a number you tell the compiler to
+treat the number like a double and because of that, we have a promotion for integer money to a double. Because as mentioned
+in Expression topic, C compiler promotes the operand of lower type to an arithmetic or rational expression to an operand
+of higher type. money's type is int which is lower than double.
+b.The second line is the same, but instead of .0, we use usual cating.
+c. In the third line, we cast money to double type before the division. In this case, this is 100 that has a promotion
+because it's an integer type and lower than money, which is a double type.
+
+3. 
+a.It will have the value 72 because in the division, both operands are integers so the number will be turncated from 
+72.45 to only 72.
+b. in 1, the value will be 0.00 because the result of the division is 72 and as mentioned before it is an integer type
+but it will be stored in double type (%.2lf)
+ now the %lf needs a double as a result so instead of 72 we will have 0.00 (because two decimal places = %2lf)
+in 2, the result value is 72 because the division's answer is 72 and %d is the integer.
+in 3, the result is 0.00, because in the begining of the code, result is the placeholder for the answer of money/100 and in the 
+assignment expression we store the value of the right operand(or expression) which is 72 to the left operand. and because of %.2lf,
+we have 0.00
+in 4, is the same from sample 3 but it's integer type (%d) so the answer is 72.
+
+4. for sample 1, we can cast money to double type and for sample 3 we can cast result to double type.
