@@ -1,0 +1,30 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  : Hoda Karimi
+Student ID#: 138611223
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. 
+It increases readability and maintainability.
+By using meaningful variable names and macros, the code becomes more self-explanatory.
+like using MIN_YEAR and MAX_YEAR. If someone wants to change the the range of the years, it would be
+much easier this way than doing it through the code.
+You can reuse different parts of the code for different context.
+It helps prevent errors related to typos and inconsistent values.
+If you write 2023 instead of 2022 in multiple places, you might introduce a subtle bug that is difficult to trace. 
+
+2.
+the validation routine is responsible for ensuring that user input falls within a specific range (0.0-5.0). 
+it's a  good thing to keep different aspects of code, such as data validation and data processing, separated. 
+This separation makes the code easier to understand and maintainable and makes it modular.
+Each part of the code has a responsibility, the validation routine ensures data integrity and sum and avarage logic
+focuses on data processing.
+By keeping the sum and average calculations separate, you can reuse the same 
+logic for different parts of the program or a future code.
+
