@@ -1,0 +1,83 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #6
+Full Name  : Hoda Karimi 
+Student ID#: 138611223
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+1.
+Each of these iterations has their own purpose:
+
+do-while: 
+a certain block of code executes at least once, 
+and then check a condition to decide whether it should continue.
+good for validating user input
+(in this code, it's good for income and number of wish list items
+ensuring that the entered values meet specific condition)
+
+for:
+iterate a range of values
+like arrays
+a clear way to iterate over array elements and index them sequentially, making the code more readable.
+(in this code, collect details of each item and calculating the total cost)
+
+while:
+loops are often used for situations where there's a need to create interactive menus 
+or perform iterations based on a condition that is not necessarily related to a specific range or array
+(used to create a menu and handle user interactions. 
+It repeatedly displays the menu until the user decides to quit or makes a valid selection)
+
+2.
+Syntax Errors: 
+making sure that no semi colon is missing
+check for semi colons that are not needed
+make sure that are varriables are declared
+checking parantheses
+make sure that the laft of assignment expression in defined
+make sure that return is there
+(by comiling, walkthrough and reading the compiler massages in visual studio)
+
+Semantic Errors: 
+don't confuse = and == and & and &&
+make sure that all iterations has bodies
+check for infinite iteration
+the order of the operators
+fixing dangling else
+pay attention to devision 
+make sure that data types are correct
+(by comiling, walkthrough and reading the compiler massages in visual studio)
+
+Testing: by using white box and black box technique
+Debigging: using IDE Debugging by using visual studio (buil solution---> debugging----> start without debugging)
+in the matrix, using command line debugging
+and Walkthrough table 
+
+3.
+First we should undrestand the Error
+The Error tells us that we entered the wrong input (5567.89 instead of 0)
+So fortunately, there's no need to change the code itself
+We only need to rerun the code and enter the correct number ( we can also click on output.txt in WinSCP to compare our output to the
+intended output)
+we  enter: gcc -g w6p2.c 
+then we enter gdb a.out
+after that it shows (gdb). we write run whenever we were ready and enter the correct numbers
+The second way is the same way we do everytime:
+gcc -Wall w6p2.c -o w6
+w6
+compile
+~profName.proflastname/submit 144w6/NAA_p2
+enter the correct number and enter Y to submit
+
+
+
+
+
+
+
+ 
+
+
