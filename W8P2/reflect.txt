@@ -1,0 +1,63 @@
+
+
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Hoda Karimi
+Student ID#: 138611223
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1.
+Benefits: It has flexibility because it allows users to choose whether they want the result through the 
+return value or by providing a pointer/reference.
+For example, in code, functions like calculateServings and calculateCostPerServing offer both return values 
+and parameters for storing results, providing users the option to choose the method that suits their coding style.
+
+Drawbacks:There's a potential for Confusion.
+Inconsistency in how functions are used across the code can make the code less maintainable and harder to understand.
+
+2.
+The function calculateReportData exhibits less than perfect cohesion. 
+This function is responsible for both calculating and assigning values to the members of the ReportData structure. 
+A function should have a single responsibility, but this function combines the responsibility of calculation and assignment.
+To improve cohesion, it would be better to split this function into two separate functions: 
+one for calculating the values and another for assigning the calculated values to the ReportData structure. 
+This way, each function would have a clearer and more focused responsibility.
+
+The convertLbsG function in the code exhibits high coupling. This function not only performs its intended conversion but also internally calls the convertLbsKg function. 
+This creates a tight coupling between the two functions. 
+If changes are made to convertLbsKg, it could potentially impact the behavior of convertLbsG. 
+To reduce coupling, it would be better to have convertLbsG call convertLbsKg explicitly before its own calculations. 
+
+3.
+I)The advantages of passing structures to functions are:
+-Readability: Using a structure as a parameter makes the function call more clear
+-Maintainability: If the structure definition is updated, the function signature remains unchanged. 
+This reduces the likelihood of errors when modifying the code.
+-Scoping: It helps in managing the scope of related data, 
+encapsulating all the information about a cat food product within a single structure.
+-Reduced Parameter Lists and Code Reusability
+
+II)Making Data Passing More Efficient:
+-Pass by Reference: Instead of passing the entire structure by value (which involves copying all the data), 
+pass a pointer to the structure. 
+This allows functions to work directly with the original data without making unnecessary copies.
+-Minimize Data Duplication: If a function only needs to read the data and not modify it, 
+use const to indicate that the data should not be modified.
+-Pointer Arithmetic (for Arrays): If your structure includes arrays, 
+passing a pointer to the first element of the array can be more efficient than passing the entire array.
+
+III)nstead of passing individual parameters, 
+the function signature can be updated to take a single parameter of type struct CatFoodInfo. 
+This not only simplifies the function call but also makes the function more adaptable to changes in the structure of the data.
+like this:
+void displayCatFoodData(const struct CatFoodInfo* catFood) {
+    
+}
+
