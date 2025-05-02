@@ -1,0 +1,35 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Hoda Karimi
+Student ID#: 138611223
+Email      : hkarimi9@myseneca.ca
+Section    : NKK
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1.
+A)
+ (customerServings >= 1 && customerServings <= 4 && coffeeweight1 == 250) ||((customerServings >= 5 && customerServings <= 9 && coffeeweight1 == 500) || (customerServings >= 10 && coffeeweight1 == 1000))
+3 >=, 2 <=, 3 ==, total 9
+
+B) 7 logical expressions
+5 &&, 2 ||
+
+2. The one without using DeMorgan’s Law is (id3 != id1 && id3 != id2)
+The one with DeMorgan’s Law is !(id3 == id1 || id3 == id2)
+The one that I submitted is the first one
+
+3. We can organize them based on their relation to a group. Like in in this case, we have:
+ char coffeeType1, coffeeType2, coffeeType3;
+  int coffeeweight1, coffeeweight2, coffeeweight3;
+  char cream1, cream2, cream3;
+these three line are connected to the product group.
+we can do this as well: 
+char cream1;
+char cream2;
+char cream3;
