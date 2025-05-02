@@ -1,0 +1,21 @@
+void sort(struct Appointment appoints[], int max) {    
+int i, j;    
+struct Appointment temp;    
+// Storing all the date and time values in minutes for comparison    
+for (i = 0; i < max; i++) {        
+appoints[i].time.min = (appoints[i].date.year * 12 * 30 * 24 * 60) + (appoints[i].date.month * 30 * 24* 60) + (appoints[i].date.day * 24 * 60) + (appoints[i].time.hour * 60) + appoints[i].time.min;    
+}
+for (i = max - 1; i > 0; i--)    {        
+for (j = 0; j < i; j++)        {            
+if (appoints[j].time.min > appoints[j + 1].time.min)            
+{                
+temp = appoints[j];               
+appoints[j] = appoints[j + 1];                
+appoints[j + 1] = temp;            
+}        
+}    
+}    
+// Converting total minutes back to minutes    
+for (i = 0; i < max; i++) {        
+appoints[i].time.min = appoints[i].time.min - (appoints[i].date.year * 12 * 30 * 24 * 60) - (appoints[i].date.month * 30 * 24 * 60) - (appoints[i].date.day * 24 * 60) - (appoints[i].time.hour * 60);    
+}

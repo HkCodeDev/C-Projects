@@ -1,0 +1,28 @@
+int timeSlotAvailable(struct Date date, struct Time time, struct Appointment* app, int maxAppointments) {    
+int i, slotAvailable = 0;    for (i = 0; i < maxAppointments; i++) {        
+// Checking if time slot is available        
+if (date.year == app[i].date.year && date.month == app[i].date.month && date.day == app[i].date.day && time.hour == app[i].time.hour && time.min == app[i].time.min) {            
+slotAvailable = 1;        
+}    
+}    
+return slotAvailable;
+}
+
+int nextSlotAvailable(struct Appointment* app, int maxAppointments) {    
+int i = 0, available = 0;    
+while (available == 0 && i < maxAppointments) {        
+if (app[i].patientNumber < 1) {            
+available = 1;        }        
+i++;    }    
+return i;}// Checks to see if an appointment is validint 
+
+validAppointment(int patientNumber, struct Date date, struct Appointment *app, int maxAppointments) {
+int i = 0, valid = 0;    
+while (valid == 0 && i < maxAppointments)    {        
+if ((app[i].patientNumber == patientNumber) && (app[i].date.day == date.day) && (app[i].date.month == date.month) && (app[i].date.year == date.year)) {            
+valid = 1;        
+}        
+i++;    
+}    
+return i - 1;
+}

@@ -1,0 +1,77 @@
+void removePatient(struct Patient patient[], int max) {    
+int pNumber, index;
+char choice, ch;    
+printf("Enter the patient number: ");    
+scanf("%d", &pNumber);   
+ printf("\n");    
+// Checking if patient number exists    
+if (findPatientIndexByPatientNum(pNumber, patient, max) != -1) {
+
+  index = findPatientIndexByPatientNum(pNumber, patient, max);        
+printf("Name  : %s\n", patient[index].name);        
+printf("Number: %05d\n", patient[index].patientNumber);        
+printf("Phone : ");        
+displayFormattedPhone(patient[index].phone.number);        
+printf(" (%s)", patient[index].phone.description);        
+printf("\n\n");        
+printf("Are you sure you want to remove this patient record? (y/n): ");        
+int flag = 1;        
+do {            
+scanf(" %c%c", &choice, &ch);            
+if ((choice == 'n' || choice == 'N') && (ch == '\n')) {               
+ printf("Operation aborted.\n\n");                
+flag = 0;                
+clearInputBuffer();            }            
+else if ((choice == 'y' || choice == 'Y') && (ch == '\n')) {                
+patient[index].patientNumber = 0;                
+printf("Patient record has been removed!\n\n");                
+flag = 0;            
+}            
+else {                
+clearInputBuffer();                
+printf("ERROR: Character must be one of [yn]: ");            
+}            
+} while (flag);    
+}    
+else {       
+ printf("ERROR: Patient record not found!\n\n");        
+clearInputBuffer();    
+}
+}
+
+
+
+void addPatient(struct Patient patient[], int max) {    
+int number, index, locate;    
+int i = 0;    
+// Checking for first empty space    
+do {        
+locate = 0;        
+if (patient[i].patientNumber == 0)        
+{            
+locate = 1;            
+index = i;        
+}        
+i++;    
+} while (i < max && locate == 0);    
+if (locate == 0)    {        
+printf("ERROR: Patient listing is FULL!\n\n");    
+}    
+else    
+{
+// Assigning the value        
+number = nextPatientNumber(patient, max);       
+ patient[index].patientNumber = number;        
+inputPatient(&patient[index]);        
+printf("*** New patient record added ***\n\n");    
+}
+}
+  inputCStringNumbers(inputNumber, 10, 10);
+
+
+
+
+Contact: CELL
+Number :  22277766666
+ERROR: String length must be exactly 10 chars: 222777666
+ERROR: String length must be exactly 10 chars: 2227776666
